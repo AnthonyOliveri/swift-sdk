@@ -9,15 +9,21 @@ branches:
   only:
     - master
     - develop
+    - semantic-versioning
 env:
   global:
     - IOS_SDK="iphonesimulator"
     - IOS_DESTINATION="OS=11.3,name=iPhone 7"
 before_install:
-  - openssl aes-256-cbc -K $encrypted_d84ac0b7eb5c_key -iv $encrypted_d84ac0b7eb5c_iv -in Source/SupportingFiles/WatsonCredentials.swift.enc -out Source/SupportingFiles/WatsonCredentials.swift -d
+  - sudo apt-get update
+  - sudo apt-get install python
+  - npm install -g npm@6.x
 install:
   - gem install cocoapods
+  - pip install --user bumpversion
+  - npm install @semantic-release/exec
 before_script:
+  - openssl aes-256-cbc -K $encrypted_d84ac0b7eb5c_key -iv $encrypted_d84ac0b7eb5c_iv -in Source/SupportingFiles/WatsonCredentials.swift.enc -out Source/SupportingFiles/WatsonCredentials.swift -d
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pod repo update master --silent ; fi # Gets the latest version of RestKit
 script:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./Scripts/run-tests.sh ; fi
@@ -28,3 +34,7 @@ script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export PATH=swift-4.1-RELEASE-ubuntu14.04/usr/bin:$PATH ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm Source/SupportingFiles/WatsonCredentials.swift ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then swift build ; fi
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: npx travis-deploy-once "npx semantic-release"
