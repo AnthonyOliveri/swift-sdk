@@ -15,8 +15,7 @@ env:
     - IOS_SDK="iphonesimulator"
     - IOS_DESTINATION="OS=11.3,name=iPhone 7"
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install python
+  - sudo easy_install pip
   - npm install -g npm@6.x
 install:
   - gem install cocoapods
