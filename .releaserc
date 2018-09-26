@@ -1,10 +1,11 @@
 {
   "branch": "semantic-versioning",
   "verifyConditions": [],
+  "tagFormat": "${version}",
   "prepare": [
     {
       "path": "@semantic-release/exec",
-      "cmd": "bumpversion --current-version ${lastRelease.version} --new-version ${nextRelease.version} --verbose patch"
+      "cmd": "bumpversion --new-version ${nextRelease.version} --verbose patch"
     }
   ],
   "publish": ["@semantic-release/github"]
