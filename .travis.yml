@@ -20,7 +20,7 @@ before_install:
   - nvm use node
 install:
   - gem install cocoapods
-  - pip install --user bumpversion
+  - sudo pip install bumpversion
   - npm install -g semantic-release@15.9.0
   - npm install -g @semantic-release/exec
 script:
