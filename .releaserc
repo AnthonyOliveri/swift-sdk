@@ -6,7 +6,18 @@
     {
       "path": "@semantic-release/exec",
       "cmd": "bumpversion --new-version ${nextRelease.version} --verbose patch"
+    },
+    {
+      "path": "@semantic-release/exec",
+      "cmd": "sh ./Scripts/generate-binaries.sh"
     }
   ],
-  "publish": ["@semantic-release/github"]
+  "publish": [
+    {
+      "path": "@semantic-release/github",
+      "assets": [
+        {"path": "IBMWatsonSwiftSDK.zip", "label": "IBMWatsonSwiftSDK.zip"}
+      ]
+    }
+  ]
 }
