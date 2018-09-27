@@ -2,7 +2,7 @@
 
 # Generate API docs and upload them to Github on the gh-pages branch
 
-./generate-documentation.sh
+sh ./generate-documentation.sh
 git checkout gh-pages
 cp -r gh-pages/* .
 rm -rf gh-pages/
