@@ -16,6 +16,8 @@ declare -a allPods=(
   "IBMWatsonVisualRecognitionV3.podspec"
 )
 
+cat IBMWatsonAssistantV1.podspec
+
 for podspec in "${allPods[@]}"
 do
   # This will only publish pods if their version has been updated
