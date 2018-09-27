@@ -40,7 +40,6 @@ deploy:
       condition: $TRAVIS_OS_NAME = osx
   - provider: script
     script: Scripts/publish-documentation.sh
-    skip_cleanup: true
     on:
       branch: semantic-versioning
       condition: $TRAVIS_OS_NAME = osx

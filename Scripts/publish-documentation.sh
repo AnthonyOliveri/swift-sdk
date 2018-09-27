@@ -1,9 +1,15 @@
 #!/bin/bash
 
 # Generate API docs and upload them to Github on the gh-pages branch
+# Note that this is only meant to be called from Travis builds
 
+set -ev
+
+git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+git fetch
+git checkout -b develop origin/develop
 ./Scripts/generate-documentation.sh
-git checkout --track origin/gh-pages
+git checkout -b gh-pages origin/gh-pages
 cp -r gh-pages/* .
 rm -rf gh-pages/
 git clean -df
