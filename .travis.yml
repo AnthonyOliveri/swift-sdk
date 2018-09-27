@@ -24,7 +24,7 @@ install:
   - npm install -g semantic-release@15.9.0
   - npm install -g @semantic-release/exec
 script:
-  - echo "Script"
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then carthage update --platform iOS --no-use-binaries ; fi
 deploy:
   - provider: script
     skip_cleanup: true
