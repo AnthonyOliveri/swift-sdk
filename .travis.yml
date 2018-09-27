@@ -22,6 +22,7 @@ install:
   - sudo pip install bumpversion
   - npm install -g semantic-release@15.9.0
   - npm install -g @semantic-release/exec
+  - gem install jazzy
 script:
   - echo "Script"
 deploy:
