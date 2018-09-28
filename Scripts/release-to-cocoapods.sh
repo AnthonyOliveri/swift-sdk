@@ -2,7 +2,7 @@
 
 # Publishes the latest version of all services to Cocoapods
 
-set -ev
+set -e
 
 declare -a allPods=(
   "IBMWatsonAssistantV1.podspec"
