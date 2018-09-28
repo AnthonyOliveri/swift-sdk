@@ -4,6 +4,10 @@
   "tagFormat": "${version}",
   "prepare": [
     {
+      "path": "@semantic-release/changelog",
+      "changelogFile": "CHANGELOG.md",
+    },
+    {
       "path": "@semantic-release/exec",
       "cmd": "bumpversion --new-version ${nextRelease.version} --verbose patch"
     }
