@@ -20,7 +20,7 @@ import RestKit
 /// Contains functionality and information common to all of the services
 internal struct Shared {
 
-    static let sdkVersion = "1.0.3"
+    static let sdkVersion = "1.1.0"
     static let apiKey = "apikey"
     static let icpPrefix = "icp-"
 
