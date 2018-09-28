@@ -24,9 +24,10 @@ install:
   - npm install -g @semantic-release/exec
   - npm install -g @semantic-release/changelog
   - npm install -g @semantic-release/git
+  - gem install cocoapods
   - gem install jazzy
 script:
-  - echo "Script"
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then carthage update --platform iOS --no-use-binaries ; fi
 deploy:
   - provider: script
     script: npx semantic-release
