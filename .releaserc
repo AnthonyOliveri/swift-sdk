@@ -9,7 +9,7 @@
     },
     {
       "path": "@semantic-release/exec",
-      "cmd": "bumpversion --new-version ${nextRelease.version} --verbose patch"
+      "cmd": "bumpversion --new-version ${nextRelease.version} --verbose --allow-dirty patch"
     }
   ],
   "publish": ["@semantic-release/github"]
