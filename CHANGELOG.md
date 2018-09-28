@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AnthonyOliveri/swift-sdk/compare/1.1.0...1.1.1) (2018-09-28)
+
+
+### Bug Fixes
+
+* Fix CHANGELOG updating via semantic-release ([cc04a22](https://github.com/AnthonyOliveri/swift-sdk/commit/cc04a22))
+
 Change Log
 ==========
 
