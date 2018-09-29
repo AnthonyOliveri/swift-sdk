@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/AnthonyOliveri/swift-sdk/compare/1.1.1...2.0.0) (2018-09-29)
+
+
+### Features
+
+* **all:** Final updates to semantic-release ([e034ab5](https://github.com/AnthonyOliveri/swift-sdk/commit/e034ab5))
+
+
+### BREAKING CHANGES
+
+* **all:** Everything!
+
 ## [1.1.1](https://github.com/AnthonyOliveri/swift-sdk/compare/1.1.0...1.1.1) (2018-09-28)
 
 
