@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/AnthonyOliveri/swift-sdk/compare/2.0.0...2.1.0) (2018-10-16)
+
+
+### Bug Fixes
+
+* Carthage update failure in Travis CI ([6970a70](https://github.com/AnthonyOliveri/swift-sdk/commit/6970a70))
+
+
+### Features
+
+* **Carthage:** Update Cartfile.resolved ([28338b1](https://github.com/AnthonyOliveri/swift-sdk/commit/28338b1))
+
 # [2.0.0](https://github.com/AnthonyOliveri/swift-sdk/compare/1.1.1...2.0.0) (2018-09-29)
 
 
