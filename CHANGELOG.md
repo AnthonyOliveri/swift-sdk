@@ -1,3 +1,20 @@
+# [3.0.0](https://github.com/AnthonyOliveri/swift-sdk/compare/2.1.0...3.0.0) (2018-10-16)
+
+
+### Bug Fixes
+
+* **Demo2:** Bug fix ([5f79c38](https://github.com/AnthonyOliveri/swift-sdk/commit/5f79c38))
+
+
+### Features
+
+* **Demo:** API method change ([c2708eb](https://github.com/AnthonyOliveri/swift-sdk/commit/c2708eb))
+
+
+### BREAKING CHANGES
+
+* **Demo:** Changes Discovery APIs
+
 # [2.1.0](https://github.com/AnthonyOliveri/swift-sdk/compare/2.0.0...2.1.0) (2018-10-16)
 
 
