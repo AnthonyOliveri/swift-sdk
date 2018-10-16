@@ -22,7 +22,7 @@ internal struct Shared {
 
     static let sdkVersion = "2.1.0"
     static let apiKey = "apikey"
-    static let icpPrefix = "icp-"
+    static let icpPrefix = "icp"
 
     /// For Basic Authentication, switch to using IAM tokens for "apikey" usernames,
     /// but only for api keys that are not for ICP (which currently does not support IAM token authentication)
