@@ -18,7 +18,11 @@ declare -a allPods=(
   "IBMWatsonVisualRecognitionV3.podspec"
 )
 
+cat IBMWatsonAssistantV1.podspec
+
 for podspec in "${allPods[@]}"
 do
-  pod trunk push $podspec --allow-warnings
+  # This will only publish pods if their version has been updated
+  # pod trunk push $podspec --allow-warnings
+  echo "Pushing ${podspec} to Cocoapods!"
 done
