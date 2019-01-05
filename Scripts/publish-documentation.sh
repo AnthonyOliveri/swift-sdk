@@ -9,7 +9,7 @@ set -e
 git config --global user.name "Jenkins"
 git remote rm origin
 # git remote add origin https://watson-developer-cloud:${GH_TOKEN}@github.com/watson-developer-cloud/swift-sdk.git
-git remote add origin https://AnthonyOliveri:${GH_TOKEN}@github.com/watson-developer-cloud/swift-sdk.git
+git remote add origin https://AnthonyOliveri:${GH_TOKEN}@github.com/AnthonyOliveri/swift-sdk.git
 git fetch
 git fetch --tags
 latestVersion=$(git describe --abbrev=0 --tags)
