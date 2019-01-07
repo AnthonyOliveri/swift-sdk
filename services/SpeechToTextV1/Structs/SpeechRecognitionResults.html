@@ -63,7 +63,7 @@
                 <a href="../Structs/AudioDetails.html">AudioDetails</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/AudioDetails/ModelType.html">– ModelType</a>
+                <a href="../Structs/AudioDetails/TypeEnum.html">– TypeEnum</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AudioDetails/Compression.html">– Compression</a>
@@ -91,12 +91,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Corpus/Status.html">– Status</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/CreateLanguageModel.html">CreateLanguageModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/CreateLanguageModel/BaseModelName.html">– BaseModelName</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/CustomWord.html">CustomWord</a>
@@ -178,6 +172,17 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/WatsonError">WatsonError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/WatsonResponse">WatsonResponse</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -186,7 +191,7 @@
             <h1>SpeechRecognitionResults</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SpeechRecognitionResults</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SpeechRecognitionResults</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
 
                 </div>
               </div>
@@ -209,10 +214,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An array that can include interim and final results (interim results are returned only if supported by the method).
-Final results are guaranteed not to change; interim results might be replaced by further interim results and final
-results. The service periodically sends updates to the results list; the <code>result_index</code> is set to the lowest index
-in the array that has changed; it is incremented for new results.</p>
+                        <p>An array of <code><a href="../Structs/SpeechRecognitionResult.html">SpeechRecognitionResult</a></code> objects that can include interim and final results (interim results are
+returned only if supported by the method). Final results are guaranteed not to change; interim results might be
+replaced by further interim results and final results. The service periodically sends updates to the results list;
+the <code>result_index</code> is set to the lowest index in the array that has changed; it is incremented for new results.</p>
 
                       </div>
                       <div class="declaration">
@@ -267,9 +272,10 @@ results that it sends for new audio for the same request.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An array that identifies which words were spoken by which speakers in a multi-person exchange. Returned in the
-response only if <code>speaker_labels</code> is <code>true</code>. When interim results are also requested for methods that support them,
-it is possible for a <code>SpeechRecognitionResults</code> object to include only the <code>speaker_labels</code> field.</p>
+                        <p>An array of <code><a href="../Structs/SpeakerLabelsResult.html">SpeakerLabelsResult</a></code> objects that identifies which words were spoken by which speakers in a
+multi-person exchange. The array is returned only if the <code>speaker_labels</code> parameter is <code>true</code>. When interim results
+are also requested for methods that support them, it is possible for a <code>SpeechRecognitionResults</code> object to include
+only the <code>speaker_labels</code> field.</p>
 
                       </div>
                       <div class="declaration">
@@ -301,7 +307,7 @@ it is possible for a <code>SpeechRecognitionResults</code> object to include onl
 <ul>
 <li>Warnings for invalid parameters or fields can include a descriptive message and a list of invalid argument
 strings, for example, <code>&quot;Unknown arguments:&quot;</code> or <code>&quot;Unknown url query arguments:&quot;</code> followed by a list of the form
-<code>&quot;invalid_arg_1, invalid_arg_2.&quot;</code></li>
+<code>&quot;{invalid_arg_1}, {invalid_arg_2}.&quot;</code></li>
 <li>The following warning is returned if the request passes a custom model that is based on an older version of a
 base model for which an updated version is available: <code>&quot;Using previous version of base model, because your custom
 model has been built with it. Please note that this version will be supported only for a limited time. Consider
@@ -327,8 +333,8 @@ In both cases, the request succeeds despite the warnings.</li>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.ibm.com/watson/ai-assistant/" target="_blank" rel="external">Anthony Oliveri and Mike Kistler</a>. All rights reserved. (Last updated: 2018-10-16)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://www.ibm.com/watson/ai-assistant/" target="_blank" rel="external">Anthony Oliveri and Mike Kistler</a>. All rights reserved. (Last updated: 2019-01-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

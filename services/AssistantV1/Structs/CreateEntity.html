@@ -96,9 +96,6 @@
                 <a href="../Structs/CreateValue/ValueType.html">– ValueType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CreateWorkspace.html">CreateWorkspace</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Structs/DialogNode.html">DialogNode</a>
               </li>
               <li class="nav-group-task">
@@ -231,6 +228,9 @@
                 <a href="../Structs/Mentions.html">Mentions</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/MessageContextMetadata.html">MessageContextMetadata</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/MessageInput.html">MessageInput</a>
               </li>
               <li class="nav-group-task">
@@ -259,36 +259,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/SystemResponse.html">SystemResponse</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateDialogNode.html">UpdateDialogNode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateDialogNode/NodeType.html">– NodeType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateDialogNode/EventName.html">– EventName</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateDialogNode/DigressIn.html">– DigressIn</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateDialogNode/DigressOut.html">– DigressOut</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateDialogNode/DigressOutSlots.html">– DigressOutSlots</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateEntity.html">UpdateEntity</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateValue.html">UpdateValue</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateValue/ValueType.html">– ValueType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/UpdateWorkspace.html">UpdateWorkspace</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Value.html">Value</a>
@@ -331,6 +301,17 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/WatsonError">WatsonError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/WatsonResponse">WatsonResponse</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -339,7 +320,7 @@
             <h1>CreateEntity</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateEntity</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateEntity</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
 
                 </div>
               </div>
@@ -366,8 +347,9 @@
 
 <ul>
 <li>It can contain only Unicode alphanumeric, underscore, and hyphen characters.</li>
-<li>It cannot begin with the reserved prefix <code>sys-</code>.</li>
-<li>It must be no longer than 64 characters.</li>
+<li>It must be no longer than 64 characters.
+If you specify an entity name beginning with the reserved prefix <code>sys-</code>, it must be the name of a system entity
+that you want to enable. (Any entity content specified with the request is ignored.).</li>
 </ul>
 
                       </div>
@@ -413,9 +395,9 @@ be no longer than 128 characters.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AssistantV112CreateEntityV8metadataXevp"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Property/metadata" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AssistantV112CreateEntityV8metadataXevp">metadata</a>
+                    <a class="token" href="#/">metadata</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -494,9 +476,9 @@ be no longer than 128 characters.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AssistantV112CreateEntityVXeXecfc"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Method/init(entity:description:metadata:values:fuzzyMatch:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AssistantV112CreateEntityVXeXecfc">init(entity:description:metadata:values:fuzzyMatch:)</a>
+                    <a class="token" href="#/">init(entity:description:metadata:values:fuzzyMatch:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -537,8 +519,9 @@ be no longer than 128 characters.</p>
 
 <ul>
 <li>It can contain only Unicode alphanumeric, underscore, and hyphen characters.</li>
-<li>It cannot begin with the reserved prefix <code>sys-</code>.</li>
-<li>It must be no longer than 64 characters.</li>
+<li>It must be no longer than 64 characters.
+If you specify an entity name beginning with the reserved prefix <code>sys-</code>, it must be the name of a system entity
+that you want to enable. (Any entity content specified with the request is ignored.).</li>
 </ul></p>
                                 </div>
                               </td>
@@ -607,8 +590,8 @@ tab characters, and it must be no longer than 128 characters.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.ibm.com/watson/ai-assistant/" target="_blank" rel="external">Anthony Oliveri and Mike Kistler</a>. All rights reserved. (Last updated: 2018-10-16)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://www.ibm.com/watson/ai-assistant/" target="_blank" rel="external">Anthony Oliveri and Mike Kistler</a>. All rights reserved. (Last updated: 2019-01-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
