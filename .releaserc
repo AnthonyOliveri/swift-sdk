@@ -1,5 +1,5 @@
 {
-  "branch": "origin/jenkins-testing",
+  "branch": "jenkins-testing",
   "verifyConditions": [],
   "tagFormat": "${version}",
   "prepare": [
