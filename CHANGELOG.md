@@ -1,3 +1,57 @@
+# 1.0.0 (2019-01-08)
+
+
+### Bug Fixes
+
+* Conversion of file data to multipart form data ([1d46baf](https://github.com/AnthonyOliveri/swift-sdk/commit/1d46baf))
+* **SpeechToTextV1:** Update recognizeMicrophone() to work with any authentication method ([5701ba6](https://github.com/AnthonyOliveri/swift-sdk/commit/5701ba6))
+* **Travis-CI:** Split build into multiple jobs ([29cf1e5](https://github.com/AnthonyOliveri/swift-sdk/commit/29cf1e5))
+* **Visual Recognition:** Fix deserialization error in getCoreMlModel ([9392b23](https://github.com/AnthonyOliveri/swift-sdk/commit/9392b23))
+* **VisualRecognitionV3:** temporary workaround for new A12 based devices ([62edd09](https://github.com/AnthonyOliveri/swift-sdk/commit/62edd09))
+* **VisualRecognitionV3:** temporary workaround to support A12 devices for Core ML inference ([fa212ec](https://github.com/AnthonyOliveri/swift-sdk/commit/fa212ec))
+
+
+### Features
+
+* **All:** Add support for Swift 4.2 ([4bbf42b](https://github.com/AnthonyOliveri/swift-sdk/commit/4bbf42b))
+* **AssistantV1:** Add metadata field to Context model ([c7bd31e](https://github.com/AnthonyOliveri/swift-sdk/commit/c7bd31e))
+* **AssistantV1:** Add metadata field to Context model ([13a90c1](https://github.com/AnthonyOliveri/swift-sdk/commit/13a90c1))
+* **AssistantV1:** Add option to sort results in getWorkspace() ([47cb1a1](https://github.com/AnthonyOliveri/swift-sdk/commit/47cb1a1))
+* **AssistantV1:** Add option to sort results in getWorkspace() ([5cefc7b](https://github.com/AnthonyOliveri/swift-sdk/commit/5cefc7b))
+* **AssistantV1, AssistantV2:** Add cloudFunction and webAction to DialogNodeAction.ActionType ([16d3fc9](https://github.com/AnthonyOliveri/swift-sdk/commit/16d3fc9))
+* **Discovery:** Add "LT" option to environment sizes ([f92fcde](https://github.com/AnthonyOliveri/swift-sdk/commit/f92fcde))
+* **Discovery:** Add `size` parameter to updateEnvironment method ([725e1d5](https://github.com/AnthonyOliveri/swift-sdk/commit/725e1d5))
+* **Discovery:** Add bias and loggingOptOut parameters to query methods ([8782fc6](https://github.com/AnthonyOliveri/swift-sdk/commit/8782fc6))
+* **Discovery:** Add requestedSize and searchStatus properties to Environment model ([14cdb02](https://github.com/AnthonyOliveri/swift-sdk/commit/14cdb02))
+* **DiscoveryV1:** Add new concepts property to NluEnrichmentFeatures model ([1b46a68](https://github.com/AnthonyOliveri/swift-sdk/commit/1b46a68))
+* **DiscoveryV1:** Add new concepts property to NluEnrichmentFeatures model ([80258db](https://github.com/AnthonyOliveri/swift-sdk/commit/80258db))
+* **DiscoveryV1:** Add retrievalDetails property to QueryResponse model ([631affc](https://github.com/AnthonyOliveri/swift-sdk/commit/631affc))
+* **DiscoveryV1:** Add retrievalDetails property to QueryResponse model ([5514c7e](https://github.com/AnthonyOliveri/swift-sdk/commit/5514c7e))
+* **DiscoveryV1:** Tokenization dictionaries for collections ([d274371](https://github.com/AnthonyOliveri/swift-sdk/commit/d274371))
+* **docs:** Alter documentation publishing to work on Jenkins ([160f23e](https://github.com/AnthonyOliveri/swift-sdk/commit/160f23e))
+* **NaturalLanguageUnderstandingV1:** Add 4 new properties to the Model model ([4d2d5ce](https://github.com/AnthonyOliveri/swift-sdk/commit/4d2d5ce))
+* **NaturalLanguageUnderstandingV1:** Add 4 new properties to the Model model ([53fe057](https://github.com/AnthonyOliveri/swift-sdk/commit/53fe057))
+* **NaturalLanguageUnderstandingV1:** Add new count property to KeywordsResult model ([ab9a339](https://github.com/AnthonyOliveri/swift-sdk/commit/ab9a339))
+* **NaturalLanguageUnderstandingV1:** Add new count property to KeywordsResult model ([3f69bfd](https://github.com/AnthonyOliveri/swift-sdk/commit/3f69bfd))
+* **NaturalLanguageUnderstandingV1:** Add new limit property to CategoriesOptions model ([5bf6637](https://github.com/AnthonyOliveri/swift-sdk/commit/5bf6637))
+* **NaturalLanguageUnderstandingV1:** Add new limit property to CategoriesOptions model ([6918e9a](https://github.com/AnthonyOliveri/swift-sdk/commit/6918e9a))
+* **SpeechToTextV1:** Add languageCustomizationID parameter to createJob() and recognize() ([0137964](https://github.com/AnthonyOliveri/swift-sdk/commit/0137964))
+* **test:** Run tests on a newer iOS simulator ([e754bfb](https://github.com/AnthonyOliveri/swift-sdk/commit/e754bfb))
+* **ToneAnalyzer:** Add `ToneID` options to `ToneChatScore` ([ac75c92](https://github.com/AnthonyOliveri/swift-sdk/commit/ac75c92))
+* **Travis:** Re-add test job ([2a8441f](https://github.com/AnthonyOliveri/swift-sdk/commit/2a8441f))
+* **Travis:** Separate all components of the release process ([3408e2d](https://github.com/AnthonyOliveri/swift-sdk/commit/3408e2d))
+
+
+### Reverts
+
+* **AssistantV1:** Revert erroneous addition of `actions` property to `OutputData` ([28efe1e](https://github.com/AnthonyOliveri/swift-sdk/commit/28efe1e))
+* **Linux:** Remove 30 minute wait from Linux tests ([1b4d734](https://github.com/AnthonyOliveri/swift-sdk/commit/1b4d734))
+
+
+### BREAKING CHANGES
+
+* **Travis:** blah
+
 # [1.1.0](https://github.com/watson-developer-cloud/swift-sdk/compare/1.0.0...1.1.0) (2018-12-11)
 
 
