@@ -1,33 +1,29 @@
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+    - os: osx
+      osx_image: xcode10.1
+branches:
+  only:
+    - jenkins-testing
 jobs:
   include:
-
     - stage: test
       script: ./Scripts/travis/test.sh
-      branches:
-        only:
-          - jenkins-testing
-      matrix:
-        include:
-          - os: linux
-            dist: trusty
-            sudo: required
-          - os: osx
-            osx_image: xcode10.1
-
     - stage: release new version
       script: ./Scripts/travis/new-release.sh
       on:
         branch: jenkins-testing
-        os: osx
-
+        condition: $TRAVIS_OS_NAME = osx
     - stage: deploy to cocoapods
       script: ./Scripts/travis/deploy-to-cocoapods.sh
       on:
         branch: jenkins-testing
-        os: osx
-
+        condition: $TRAVIS_OS_NAME = osx
     - stage: publish documentation
       script: ./Scripts/travis/publish-documentation.sh
       on:
         branch: jenkins-testing
-        os: osx
+        condition: $TRAVIS_OS_NAME = osx
