@@ -8,10 +8,6 @@ matrix:
 branches:
   only:
     - jenkins-testing
-env:
-  global:
-    - IOS_SDK="iphonesimulator"
-    - IOS_DESTINATION="name=iPhone XS,OS=12.0"
 jobs:
   include:
     - stage: test
