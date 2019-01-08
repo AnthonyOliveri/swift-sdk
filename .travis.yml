@@ -15,8 +15,11 @@ env:
     - IOS_DESTINATION="name=iPhone XS,OS=12.0"
 jobs:
   include:
-    # - stage: test
-    #   script: ./Scripts/travis/test.sh
+    - stage: test
+      script: ./Scripts/travis/test.sh
+      on:
+        branch: jenkins-testing
+        condition: $TRAVIS_OS_NAME = osx
     - stage: release new version
       script: ./Scripts/travis/new-release.sh
       on:
