@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/AnthonyOliveri/swift-sdk/compare/1.0.0...1.1.0) (2019-01-08)
+
+
+### Bug Fixes
+
+* **Travis:** Re-add integration tests ([73e3cc2](https://github.com/AnthonyOliveri/swift-sdk/commit/73e3cc2))
+
+
+### Features
+
+* **Travis:** Disable tests again ([3319190](https://github.com/AnthonyOliveri/swift-sdk/commit/3319190))
+
 # 1.0.0 (2019-01-08)
 
 
