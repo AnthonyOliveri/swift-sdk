@@ -1,18 +1,7 @@
-sudo easy_install pip
-nvm install node
-nvm use node
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update ; fi
-gem install cocoapods
-gem install jazzy
-sudo pip install bumpversion
-npm install -g semantic-release@15.9.0
-npm install -g @semantic-release/exec
-npm install -g @semantic-release/changelog
-npm install -g @semantic-release/git
-if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated swiftlint || brew upgrade swiftlint ; fi
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated carthage || brew upgrade carthage ; fi
-
 openssl aes-256-cbc -K $encrypted_d84ac0b7eb5c_key -iv $encrypted_d84ac0b7eb5c_iv -in Source/SupportingFiles/WatsonCredentials.swift.enc -out Source/SupportingFiles/WatsonCredentials.swift -d
+
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pod repo update master --silent ; fi # Gets the latest version of RestKit
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then carthage update --platform iOS ; fi
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update -y ; fi

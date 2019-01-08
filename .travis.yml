@@ -17,22 +17,12 @@ jobs:
   include:
     - stage: test
       script: ./Scripts/travis/test.sh
-    # - stage: deploy
-    #   script:
-    #     - provider: script
-    #       script: npx semantic-release
-    #       skip_cleanup: true
-    #       on:
-    #         branch: jenkins-testing
-    #         condition: $TRAVIS_OS_NAME = osx
-    #     - provider: script
-    #       script: Scripts/release-to-cocoapods.sh
-    #       skip_cleanup: true
-    #       on:
-    #         branch: jenkins-testing
-    #         condition: $TRAVIS_OS_NAME = osx
-    #     - provider: script
-    #       script: Scripts/publish-documentation.sh
-    #       on:
-    #         branch: jenkins-testing
-    #         condition: $TRAVIS_OS_NAME = osx
+    - stage: deploy
+      on:
+        branch: jenkins-testing
+        condition: $TRAVIS_OS_NAME = osx
+      script: ./Scripts/travis/deploy.sh
+    - stage: publish-documentation
+      on:
+        branch: jenkins-testing
+        condition: $TRAVIS_OS_NAME = osx
