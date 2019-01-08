@@ -22,7 +22,7 @@ jobs:
         branch: jenkins-testing
         condition: $TRAVIS_OS_NAME = osx
       script: ./Scripts/travis/deploy.sh
-    - stage: publish-documentation
+    - stage: Publish Documentation
       on:
         branch: jenkins-testing
         condition: $TRAVIS_OS_NAME = osx
