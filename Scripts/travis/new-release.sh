@@ -10,8 +10,6 @@ set -e
 sudo easy_install pip
 source ~/.nvm/nvm.sh
 nvm install 10
-gem install cocoapods
-gem install jazzy
 sudo pip install bumpversion
 npm install -g semantic-release@15.9.0
 npm install -g @semantic-release/exec
