@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Generate API docs and upload them to Github on the gh-pages branch
 # IMPORTANT: This is only meant to be called from Travis builds!
 

@@ -1,6 +1,15 @@
+# Uses the semantic-release tool to automatically release a new version to Github
+# Includes:
+	# New git tag
+	# Github release with release notes and an attached pre-built SDK
+	# Updated CHANGELOG
+	# Updated version number in source files
+
+set -e
+
 sudo easy_install pip
-nvm install node
-nvm use node
+source ~/.nvm/nvm.sh
+nvm install 10
 gem install cocoapods
 gem install jazzy
 sudo pip install bumpversion
@@ -13,4 +22,3 @@ if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated carthage || brew upgrade
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then carthage update --platform iOS ; fi
 
 npx semantic-release
-./Scripts/release-to-cocoapods.sh

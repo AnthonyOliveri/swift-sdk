@@ -15,14 +15,20 @@ env:
     - IOS_DESTINATION="name=iPhone XS,OS=12.0"
 jobs:
   include:
-    - stage: test
-      script: ./Scripts/travis/test.sh
-    - stage: deploy
+    # - stage: test
+    #   script: ./Scripts/travis/test.sh
+    - stage: release new version
+      script: ./Scripts/travis/new-release.sh
       on:
         branch: jenkins-testing
         condition: $TRAVIS_OS_NAME = osx
-      script: ./Scripts/travis/deploy.sh
-    - stage: Publish Documentation
+    - stage: deploy to cocoapods
+      script: ./Scripts/travis/deploy-to-cocoapods.sh
+      on:
+        branch: jenkins-testing
+        condition: $TRAVIS_OS_NAME = osx
+    - stage: publish documentation
+      script: ./Scripts/travis/publish-documentation.sh
       on:
         branch: jenkins-testing
         condition: $TRAVIS_OS_NAME = osx

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Publishes the latest version of all services to Cocoapods
 
 set -e
@@ -17,8 +15,6 @@ declare -a allPods=(
   "IBMWatsonToneAnalyzerV3.podspec"
   "IBMWatsonVisualRecognitionV3.podspec"
 )
-
-cat IBMWatsonAssistantV1.podspec
 
 for podspec in "${allPods[@]}"
 do
