@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AnthonyOliveri/swift-sdk/compare/1.1.0...1.1.1) (2019-01-08)
+
+
+### Bug Fixes
+
+* **Travis:** Comment out integration tests ([ca4156c](https://github.com/AnthonyOliveri/swift-sdk/commit/ca4156c))
+
 # [1.1.0](https://github.com/AnthonyOliveri/swift-sdk/compare/1.0.0...1.1.0) (2019-01-08)
 
 
