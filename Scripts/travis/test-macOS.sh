@@ -10,4 +10,4 @@ pod repo update master --silent # Gets the latest version of RestKit
 carthage update --platform iOS
 
 ./Scripts/pod-lint.sh
-./Scripts/run-tests.sh
+# ./Scripts/run-tests.sh
