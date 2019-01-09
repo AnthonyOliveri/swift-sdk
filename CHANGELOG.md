@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/AnthonyOliveri/swift-sdk/compare/1.1.1...1.1.2) (2019-01-09)
+
+
+### Bug Fixes
+
+* **Travis:** Move jazzy installation to docs publishing script ([c0126e1](https://github.com/AnthonyOliveri/swift-sdk/commit/c0126e1))
+
 ## [1.1.1](https://github.com/AnthonyOliveri/swift-sdk/compare/1.1.0...1.1.1) (2019-01-08)
 
 
