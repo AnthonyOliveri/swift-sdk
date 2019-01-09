@@ -4,12 +4,10 @@ branches:
     - test-branch
 jobs:
   include:
-    - stage: test Linux
-      script: ./Scripts/travis/test-Linux.sh
-      os: linux
-    - stage: test macOS
-      script: ./Scripts/travis/test-macOS.sh
-      os: osx
+    - stage: test
+      script: 
+        - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./Scripts/travis/test-macOS.sh; fi
+        - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./Scripts/travis/test-Linux.sh; fi
     - stage: release new version
       script: ./Scripts/travis/new-release.sh
       os: osx
